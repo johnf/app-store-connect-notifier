@@ -94,6 +94,19 @@ export BOT_STATUS_SLACK_WEBHOOK_URL="https://hooks.slack.com/services/XXXXXXXX/X
 export POLL_TIME_IN_SECONDS=120
 ```
 
+### Method 3: Docker
+
+Use environment variables similarly to Method 2
+
+``` bash
+docker run \
+  -e SPACESHIP_CONNECT_API_KEY="$(cat api_key.p8)" \
+  -e SPACESHIP_CONNECT_API_ISSUER_ID="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxxxx" \
+  -e SPACESHIP_CONNECT_API_KEY_ID="xxxxxxxxxx" \
+  -e BOT_SLACK_WEBHOOK_URL="https://hooks.slack.com/services/XXXXXXXX/XXXXXXXX/XxxxXXXXXxxxxxxxxxxxx" \
+  rogerluan/app-store-connect-notifier:latest
+```
+
 #### Install
 
 ```bash
